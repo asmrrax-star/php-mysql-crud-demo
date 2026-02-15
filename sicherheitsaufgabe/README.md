@@ -1,27 +1,55 @@
-Sicherheitsaufgabe zur Erfassung von Mitarbeitern: 
+# Mitarbeiterverwaltung – Sicherheitsaufgabe (PHP / MySQL)
 
-Ich habe dieses Projekt im Rahmen unserer Modulabschlussprüfung für Dr. Rene Bäder erstellt. 
-Es handelt sich um eine einfache Mitarbeiterverwaltung die mit PHP und MySQL umgesetzt wurde. 
+Dieses Projekt entstand im Rahmen einer Modulabschlussprüfung während meiner Ausbildung zum Informatiker EFZ (Applikationsentwicklung).
+Ziel der Aufgabe war die Umsetzung einer einfachen Webanwendung zur Verwaltung von Mitarbeitern unter besonderer Berücksichtigung grundlegender Sicherheitsaspekte.
 
-Das Projekt basiert auf dem CRUD Prinzip: 
-- Create - Mitarbeiter erfassen
-- Read - Übersicht anzeigen
-- Update - Mitarbeiter bearbeiten
-- Delete - Mitarbeiter löschen 
+## Projektbeschreibung
 
-Funktionen: 
-- Mitarbeiter anzeigen
-- Neue Mitarbeiter hinzufügen 
-- Mitarbeiter bearbeiten
-- Mitarbeiter löschen
-- Eingaben validieren
-- Passwort hashen beim Speichern 
+Die Anwendung ermöglicht die Verwaltung von Mitarbeitern über eine klassische CRUD-Architektur und demonstriert den Einsatz von serverseitiger Validierung, sicherer Datenbankanbindung sowie geschützter Passwortspeicherung.
 
-Verwendete Technologien: 
-- PHP - Logik 
-- My SQL - Datenbank
-- XAMPP - Apache und MySQL 
-- HTML und CSS - Darstellung des Browsers 
-- Prepared Statements - Schutz vor SQL Injectionen
-- 'password_hash()' - sicheres Speichern der Passwörter 
+## Funktionen
 
+* Mitarbeiter anzeigen (Übersicht)
+* Neue Mitarbeiter erfassen
+* Mitarbeiterdaten bearbeiten
+* Mitarbeiter löschen
+* Eingaben validieren
+* Passwörter sicher speichern (Hashing)
+
+## Technische Umsetzung
+
+Die Anwendung basiert auf einer klassischen LAMP-ähnlichen Struktur (lokal mit XAMPP):
+
+* **PHP** – Serverseitige Logik
+* **MySQL** – Relationale Datenbank
+* **Apache (XAMPP)** – Lokale Entwicklungsumgebung
+* **HTML / CSS** – Benutzeroberfläche
+
+## Sicherheitsaspekte
+
+Im Fokus der Aufgabe standen grundlegende Web-Sicherheitsmechanismen:
+
+* Verwendung von **Prepared Statements** zum Schutz vor SQL-Injection
+* Serverseitige Validierung der Eingaben
+* Sichere Passwortspeicherung mit `password_hash()`
+* Trennung von Datenbankverbindung und Anwendungslogik (`db_connect.php`)
+
+## Datenbank
+
+Die benötigte Datenbankstruktur ist in der Datei
+`sicherheitsaufgabe.sql` enthalten und kann direkt in MySQL importiert werden.
+
+## Lokale Ausführung
+
+1. Projekt in das `htdocs`-Verzeichnis von XAMPP kopieren
+2. Apache und MySQL starten
+3. Datenbank über `sicherheitsaufgabe.sql` importieren
+4. Anwendung im Browser aufrufen:
+
+   ```
+   http://localhost/sicherheitsaufgabe
+   ```
+
+## Zweck des Projekts
+
+Dieses Projekt dient ausschließlich zu Lern- und Demonstrationszwecken und zeigt die praktische Umsetzung grundlegender Konzepte der sicheren Webentwicklung mit PHP und MySQL.
